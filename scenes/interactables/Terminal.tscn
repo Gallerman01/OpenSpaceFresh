@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3]
 
-[ext_resource type="Script" path="res://Terminal.cs" id="1"]
+[ext_resource type="Script" path="res://scripts/Terminal.cs" id="1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_terminal"]
 size = Vector2(72, 72)
@@ -9,7 +9,7 @@ size = Vector2(72, 72)
 script = ExtResource("1")
 DisplayName = "Терминал станции"
 ActionText = "E - открыть"
-PopupScenePath = "res://TerminalPopup.tscn"
+PopupScenePath = "res://scenes/ui/TerminalPopup.tscn"
 HighlightColor = Color(0.4, 0.9, 1, 1)
 
 [node name="Visual" type="Polygon2D" parent="."]

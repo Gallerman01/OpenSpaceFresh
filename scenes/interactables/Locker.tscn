@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3]
 
-[ext_resource type="Script" path="res://Locker.cs" id="1"]
+[ext_resource type="Script" path="res://scripts/Locker.cs" id="1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_locker"]
 size = Vector2(72, 72)
@@ -9,7 +9,7 @@ size = Vector2(72, 72)
 script = ExtResource("1")
 DisplayName = "Шкаф хранения"
 ActionText = "E - открыть"
-PopupScenePath = "res://LockerPopup.tscn"
+PopupScenePath = "res://scenes/ui/LockerPopup.tscn"
 HighlightColor = Color(0.4, 1, 0.6, 1)
 
 [node name="Visual" type="Polygon2D" parent="."]
