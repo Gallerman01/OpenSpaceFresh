@@ -35,7 +35,7 @@ public partial class InteractableObject : Area2D
         if (!_playerInside)
             return;
 
-        if (InteractionHud.Instance != null && !InteractionHud.Instance.IsActive(this))
+        if (PlayerUI.Instance != null && !PlayerUI.Instance.IsActive(this))
             return;
 
         bool interactPressed = Input.IsKeyPressed(Key.E);
@@ -53,7 +53,7 @@ public partial class InteractableObject : Area2D
 
         _playerInside = true;
         SetHighlight(true);
-        InteractionHud.Instance?.AddObject(this);
+        PlayerUI.Instance?.AddObject(this);
     }
 
     private void OnBodyExited(Node2D body)
@@ -63,7 +63,7 @@ public partial class InteractableObject : Area2D
 
         _playerInside = false;
         SetHighlight(false);
-        InteractionHud.Instance?.RemoveObject(this);
+        PlayerUI.Instance?.RemoveObject(this);
     }
 
     private void SetHighlight(bool enabled)

@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" path="res://scenes/Player.tscn" id="1"]
 [ext_resource type="PackedScene" path="res://scenes/interactables/Terminal.tscn" id="2"]
 [ext_resource type="PackedScene" path="res://scenes/interactables/Locker.tscn" id="3"]
-[ext_resource type="PackedScene" path="res://scenes/ui/InteractionHud.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://scenes/ui/PlayerUI.tscn" id="4"]
 
 [node name="StationRoom" type="Node2D"]
 
@@ -20,4 +20,4 @@ position = Vector2(320, 120)
 [node name="Locker" parent="." instance=ExtResource("3")]
 position = Vector2(430, 120)
 
-[node name="InteractionHud" parent="." instance=ExtResource("4")]
+[node name="PlayerUI" parent="." instance=ExtResource("4")]
