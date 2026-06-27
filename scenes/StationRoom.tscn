@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3]
 
-[ext_resource type="PackedScene" path="res://Player.tscn" id="1"]
-[ext_resource type="PackedScene" path="res://Terminal.tscn" id="2"]
-[ext_resource type="PackedScene" path="res://Locker.tscn" id="3"]
-[ext_resource type="PackedScene" path="res://InteractionHud.tscn" id="4"]
+[ext_resource type="PackedScene" path="res://scenes/Player.tscn" id="1"]
+[ext_resource type="PackedScene" path="res://scenes/interactables/Terminal.tscn" id="2"]
+[ext_resource type="PackedScene" path="res://scenes/interactables/Locker.tscn" id="3"]
+[ext_resource type="PackedScene" path="res://scenes/ui/InteractionHud.tscn" id="4"]
 
 [node name="StationRoom" type="Node2D"]
 
