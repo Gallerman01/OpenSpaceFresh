@@ -1,9 +1,9 @@
 using Godot;
 using System.Collections.Generic;
 
-public partial class InteractionHud : CanvasLayer
+public partial class PlayerUI : CanvasLayer
 {
-    public static InteractionHud Instance { get; private set; }
+    public static PlayerUI Instance { get; private set; }
 
     private Label _listLabel;
     private readonly List<InteractableObject> _items = new();
@@ -12,7 +12,7 @@ public partial class InteractionHud : CanvasLayer
     public override void _Ready()
     {
         Instance = this;
-        _listLabel = GetNode<Label>("Panel/ListLabel");
+        _listLabel = GetNode<Label>("Panel/EnvironmentListLabel");
         Refresh();
     }
 
@@ -67,13 +67,11 @@ public partial class InteractionHud : CanvasLayer
 
         if (_items.Count == 0)
         {
-            Visible = false;
+            _listLabel.Text = "No nearby interactable objects.";
             return;
         }
 
-        Visible = true;
-
-        string text = "Доступно:\n";
+        string text = "";
 
         for (int i = 0; i < _items.Count; i++)
         {
